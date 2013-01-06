@@ -4,7 +4,6 @@ run_list(
   "recipe[users::sysadmins]",
   "recipe[sudo]",
   "recipe[apt]",
-  "recipe[git]",
   "recipe[vim]"
 )
 override_attributes(
