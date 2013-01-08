@@ -1,7 +1,6 @@
 name "game_server"
 description "Game server role"
 all_env = [
-  "role[base]",
   "recipe[java]"
 ]
 

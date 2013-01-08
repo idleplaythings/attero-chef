@@ -1,7 +1,6 @@
 name "dev_server"
 description "Development server role"
 all_env = [
-  "role[base]",
   "role[game_server]",
   "recipe[scala::http]",
   "recipe[play::http]",
