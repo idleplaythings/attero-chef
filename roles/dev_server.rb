@@ -30,7 +30,7 @@ override_attributes(
   },
   :authorization => {
     :sudo => {
-      :users => ["developers"],
+      :groups => ["developers"],
         :passwordless => true
       }
   }
