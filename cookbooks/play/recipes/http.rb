@@ -8,6 +8,7 @@
 #
 
 base_dir = node['play']['base_dir']
+base_url = node['play']['base_url']
 version = node['play']['version']
 
 package "unzip" do
@@ -15,7 +16,7 @@ package "unzip" do
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/play-#{version}.zip" do
-  source "#{node['play']['download_base_url']}/play-#{version}.zip"
+  source "#{base_url}/play-#{version}.zip"
   mode "0644"
   checksum node['play']['checksum']
 end

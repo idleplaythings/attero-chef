@@ -8,6 +8,7 @@
 #
 
 base_dir = node['scala']['base_dir']
+base_url = node['scala']['base_url']
 version = node['scala']['version']
 
 package "tar" do
@@ -15,7 +16,7 @@ package "tar" do
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/scala-#{version}.tgz" do
-  source "#{node['scala']['download_base_url']}/scala-#{version}.tgz"
+  source "#{base_url}/scala-#{version}.tgz"
   mode "0644"
   checksum node['scala']['checksum']
 end
