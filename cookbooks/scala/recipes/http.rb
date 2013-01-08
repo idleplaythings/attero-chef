@@ -28,7 +28,7 @@ directory node['scala']['base_dir'] do
     recursive true
 end
 
-bash "move scala dir" do
+bash "install scala" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOF
   tar -zxvf scala-#{version}.tgz

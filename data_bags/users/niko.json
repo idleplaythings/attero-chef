@@ -1,7 +1,7 @@
 {
-    "id": "nn",
+    "id": "niko",
     "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAgEAt80Zrc7abOL3nvXvUKT9QlibVCis8qWjDtcyUQ+jTWvcDBgSHv3OlWJGUUvVXP5jQAJ8R8hWWfb+ANAYwkQERjpYzL6KdjZx82V3LUIZGTcGC638ipxqTGV3Od/D8IbFmpIGoTxW4Fbh25wf8Gpu2O47A3a9JH89/pub/TgxlLSQ1nwO3wXFK9LDtVP2BS0znDaDgjkLjqX+tyf7ISWRhn9TthE2nqaZuo49Ag0dQZVOua6ZBfpi7bWBxmwGokB5hCXWYEkO/MNLxda81+wAaPO1ZqS0exQrzM+XPtw/mHz2foUXhlAg819w6TaYfqOHmqAzCy08ogvLgdv6g88z4Yy/cbcaHTtbvZLNWFOC1PTv1Pi5PEzTmEZhiYrvESXX0u5Bfp6HhYYnfDOQqW+iEjGywrJ96aZiquipXaya0XLb2buLPLG11ylUEsUhPI+fk0WYMh7tL37uCEZz+rldLJSQ2yK5UBlY6znjz+zjKDrWcnjThzClLknJ/NsMHm4T+kR0uVlfQxr98kR6kqVKUrgamPTTNBAlzb7MZfawi6ol8ji9RGSzoicNmaoADyAYdkuhuVrywe3mbJsKe47QpDRE5cqX5QjtiQZ8iAuiRbjT42bh07rpA06CA0MggvViynqBfdQ6h96UE9xlxuF7tQfT3ezneutlzF+t18hn26c= niko@nevala.fi",
-    "groups": [ "sysadmin", "dba", "devops" ],
+    "groups": [ "developers" ],
     "uid": 2001,
     "shell": "\/bin\/bash"
 }
