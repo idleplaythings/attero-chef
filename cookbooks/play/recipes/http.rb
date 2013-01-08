@@ -28,11 +28,13 @@ directory node['play']['base_dir'] do
     recursive true
 end
 
-bash "move play dir" do
+bash "install play framework" do
   cwd Chef::Config[:file_cache_path]
   code <<-EOF
   unzip play-#{version}.zip
   mv play-#{version} #{base_dir}
+  cd #{base_dir}/play-#{version}/framework
+  ./build build-repository
   EOF
   not_if do File.exist?("#{base_dir}/play-#{version}") end
 end
