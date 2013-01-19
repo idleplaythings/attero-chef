@@ -1,0 +1,7 @@
+{
+    "id": "aatu",
+    "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDa0SwGBUjKZrTrwGnNoyrzAF4lbJ8S8DK1ALIs7dzpS5ZI85y1h7z2ZjAwAUEgNTfrL5Scb7j17n+27no88Hyp7FdijZT5uQAghrF5t36c9G1V9VsIjBfrgg7/XDT+km/FPofki1hZQ97Xc9wQ1OtbQt714RzLwshO+7PHLJ9+FBhvbCKJVTmQDfUNNqdbHX3bZx7I4Kj6PrFeyAuoohuUlrILmtLVmKTURpTPQVHZrakosTN6iDAf/lno3EsnFPsB9OSt6Du4wYskfb7lBbmvUXiGUdI0HP+nhLwDNdC6gDem/SnbNOg8pRYGppMakvK+z7Iq5PBKbyxxI+MkDX31 aatu.riuttamak@solinor.com",
+    "groups": [ "developers" ],
+    "uid": 2002,
+    "shell": "\/bin\/bash"
+}
