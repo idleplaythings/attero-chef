@@ -2,7 +2,8 @@ name "db_master"
 description "Master database server"
 
 all_env = [
-  "recipe[mysql::server]"
+  "recipe[mysql::server]",
+  "recipe[postgresql::server]"
 ]
 
 run_list(all_env)
