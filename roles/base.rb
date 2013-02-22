@@ -8,11 +8,11 @@ run_list(
   "recipe[vim]",
   "recipe[utilities::acl]"
 )
-override_attributes(
+default_attributes(
   :authorization => {
     :sudo => {
-      :users => ["ubuntu", "vagrant"],
-        :passwordless => true
-      }
+      :groups => ["devops"],
+      :passwordless => true
+    }
   }
 )
