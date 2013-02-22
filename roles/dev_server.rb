@@ -4,7 +4,8 @@ all_env = [
   "role[game_server]",
   "recipe[scala::http]",
   "recipe[play::http]",
-  "recipe[users::developers]"
+  "recipe[users::developers]",
+  "recipe[git]"
 ]
 
 run_list(all_env)
