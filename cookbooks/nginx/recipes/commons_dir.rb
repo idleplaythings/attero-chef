@@ -18,9 +18,6 @@
 # limitations under the License.
 #
 
-<<<<<<< HEAD:cookbooks/nginx/recipes/commons_dir.rb
-directory node['nginx']['dir'] do
-=======
 if node["platform"] == "windows"
   return "#{node['platform']} is not supported by the #{cookbook_name}::#{recipe_name} recipe"
 end
@@ -28,7 +25,6 @@ end
 include_recipe "git"
 
 directory node["git"]["server"]["base_path"] do
->>>>>>> chef-vendor-git:cookbooks/git/recipes/server.rb
   owner "root"
   group "root"
   mode 00755
@@ -42,14 +38,6 @@ directory node['nginx']['log_dir'] do
   recursive true
 end
 
-<<<<<<< HEAD:cookbooks/nginx/recipes/commons_dir.rb
-%w(sites-available sites-enabled conf.d).each do |leaf|
-  directory File.join(node['nginx']['dir'], leaf) do
-    owner "root"
-    group "root"
-    mode 00755
-  end
-=======
 case node['platform_family']
 when "debian"
   include_recipe "runit"
@@ -76,5 +64,4 @@ when "rhel"
 else
   log "Platform requires setting up a git daemon service script."
   log "Hint: /usr/bin/git daemon --export-all --user=nobody --group=daemon --base-path=#{node["git"]["server"]["base_path"]}"
->>>>>>> chef-vendor-git:cookbooks/git/recipes/server.rb
 end
