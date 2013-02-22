@@ -26,5 +26,12 @@ else
   default["chef_handler"]["root_group"] = "root"
 end
 
+<<<<<<< HEAD:cookbooks/chef_handler/attributes/default.rb
+=======
+attribute :path, :kind_of => String, :name_attribute => true
+attribute :source, :kind_of => String
+attribute :overwrite, :kind_of => [ TrueClass, FalseClass ], :default => false
+attribute :checksum, :kind_of => String
+>>>>>>> chef-vendor-windows:cookbooks/windows/resources/zipfile.rb
 
 default["chef_handler"]["handler_path"] = "#{File.expand_path(File.join(Chef::Config[:file_cache_path],'..'))}/handlers"
