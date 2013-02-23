@@ -100,6 +100,13 @@ else
   php_fpm_service_name = "php5-fpm"
 end
 
+cookbook_file "/etc/php5/fpm/pool.d/www.conf" do
+  source "www.conf"
+  mode 0644
+  only_if do ::File.directory?("/etc/php5/fpm/pool.d/") end
+  notifies :restart, "service[#{php_fpm_service_name}]"
+end
+
 service php_fpm_service_name do
   supports :status => true, :restart => true, :reload => true
   action [ :enable, :start ]
