@@ -5,6 +5,7 @@ default_run_list = [
     "recipe[hostname]",
     "recipe[nginx]",
     "recipe[php]",
+    "recipe[php::module_curl]",
     "recipe[php-fpm]"
 ]
 
