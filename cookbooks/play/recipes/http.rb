@@ -16,7 +16,7 @@ package "unzip" do
 end
 
 remote_file "#{Chef::Config[:file_cache_path]}/play-#{version}.zip" do
-  source "#{base_url}/play-#{version}.zip"
+  source "#{base_url}/#{version}/play-#{version}.zip"
   mode "0644"
   checksum node['play']['checksum']
 end
