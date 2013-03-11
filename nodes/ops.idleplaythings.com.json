@@ -2,7 +2,9 @@
   "name": "ops.idleplaythings.com",
   "chef_environment": "prod",
   "run_list": [
-    "role[base]"
+    "role[base]",
+    "recipe[nginx]",
+    "recipe[jenkins]"
   ],
   "normal": {
     "tags": [
