@@ -54,7 +54,7 @@ define :symfony2_site,
     notifies :restart, "service[php5-fpm]"
   end
 
-  nginx_site node['fqdn'] do
+  nginx_site site do
     enable true
     notifies :restart, "service[nginx]"
   end
