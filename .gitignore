@@ -1,3 +1,5 @@
 .rake_test_cache
 .vagrant
 .chef/knife.rb
+.bundle/
+bin/
