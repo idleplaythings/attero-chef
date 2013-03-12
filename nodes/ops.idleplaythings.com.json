@@ -3,6 +3,7 @@
   "chef_environment": "prod",
   "run_list": [
     "role[base]",
+    "recipe[git]",
     "recipe[nginx]",
     "recipe[jenkins]"
   ],
