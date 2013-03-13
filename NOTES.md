@@ -6,7 +6,7 @@ bundle exec knife ec2 server create \
     --environment prod \
     --image "ami-e1e8d395" \
     --flavor "t1.micro" \
-    --run-list "role[base]" \
+    --run-list "role[base],role[ci_server]" \
     --node-name "ops.idleplaythings.com" \
     --availability-zone "eu-west-1a" \
     --region "eu-west-1" \
