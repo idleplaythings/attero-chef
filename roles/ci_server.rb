@@ -4,7 +4,8 @@ description "Continuous Integration Server"
 all_env = [
   "recipe[git]",
   "recipe[nginx]",
-  "recipe[jenkins]"
+  "recipe[jenkins]",
+  "recipe[jenkins-setup]"
 ]
 
 run_list(all_env)
