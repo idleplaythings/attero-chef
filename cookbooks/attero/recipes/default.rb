@@ -22,7 +22,7 @@ directory "#{base_dir}" do
 end
 
 # Other directories
-%w{logs releases bin}.each do |dir|
+%w{logs releases bin conf}.each do |dir|
    directory "#{base_dir}/#{dir}" do
       mode 00775
       owner "#{owner}"
@@ -40,5 +40,19 @@ template "/etc/init/attero.conf" do
   group "#{group}"
   variables(
     # :config_var => node[:configs][:config_var]
+  )
+end
+
+deploy = Chef::EncryptedDataBagItem.load("secrets", "deploy")
+
+# s3cmd configuration file
+template "#{base_dir}/conf/s3.conf" do
+  mode 0600
+  owner "#{owner}"
+  group "#{owner}"
+  source "s3cfg.erb"
+  variables(
+    :access_key => deploy["aws"]["access_key"],
+    :secret_key => deploy["aws"]["secret_key"]
   )
 end
