@@ -1,0 +1,13 @@
+# supybot
+
+description "attero service config"
+author "Niko Nevala <niko@idleplaythings.com>"
+
+setuid attero
+
+start on runlevel [2345]
+stop on runlevel [016]
+
+respawn
+
+exec /opt/attero/target/start
