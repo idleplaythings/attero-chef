@@ -9,18 +9,8 @@
 
 base_dir    = "/opt/attero"
 
-user        = "attero"
-owner       = "attero"
-group       = "attero"
-
-
-# todo only if user doesn't exist
-user "#{user}" do
-  comment "attero user"
-  system true
-  shell "/bin/sh"
-  home "/home/#{user}"
-end
+owner       = "deploy"
+group       = "deploy"
 
 # Base directory
 directory "#{base_dir}" do
@@ -32,7 +22,7 @@ directory "#{base_dir}" do
 end
 
 # Other directories
-%w{logs releases}.each do |dir|
+%w{logs releases bin}.each do |dir|
    directory "#{base_dir}/#{dir}" do
       mode 00775
       owner "#{owner}"
