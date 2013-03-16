@@ -31,3 +31,15 @@ file "#{node[:jenkins][:server][:home]}/.ssh/id_rsa.pub" do
   group "jenkins"
   content ci["ssh"]["public_key"]
 end
+
+# Create s3cmd configuration file
+template "#{node[:jenkins][:server][:home]}/.s3cfg" do
+  mode 0600
+  owner "jenkins"
+  group "jenkins"
+  source "s3cfg.erb"
+  variables(
+    :access_key => ci["aws"]["access_key"],
+    :secret_key => ci["aws"]["secret_key"]
+  )
+end
