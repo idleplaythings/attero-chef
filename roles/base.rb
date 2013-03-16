@@ -6,7 +6,8 @@ run_list(
   "recipe[apt]",
   "recipe[build-essential]",
   "recipe[vim]",
-  "recipe[utilities::acl]"
+  "recipe[utilities::acl]",
+  "recipe[utilities::s3cmd]"
 )
 default_attributes(
   :authorization => {
