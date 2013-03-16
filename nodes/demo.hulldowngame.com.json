@@ -1,0 +1,13 @@
+{
+  "name": "demo.hulldowngame.com",
+  "chef_environment": "prod",
+  "run_list": [
+    "role[base]",
+    "role[game_server]"
+  ],
+  "normal": {
+    "tags": [
+
+    ]
+  }
+}
