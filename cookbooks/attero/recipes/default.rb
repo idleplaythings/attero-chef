@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 
-base_dir    = "/opt/supybot"
+base_dir    = "/opt/attero"
 
 user        = "attero"
 owner       = "attero"
