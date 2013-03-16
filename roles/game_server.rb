@@ -1,6 +1,7 @@
 name "game_server"
 description "Game server role"
 all_env = [
+  "recipe[users::deploy]",
   "role[db_master]",
   "recipe[java]",
   "recipe[attero]"
