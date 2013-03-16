@@ -4,6 +4,7 @@ description "Continuous Integration Server"
 all_env = [
   "recipe[git]",
   "recipe[nginx]",
+  "recipe[sbt::http]",
   "recipe[jenkins]",
   "recipe[jenkins-setup]"
 ]
@@ -22,4 +23,13 @@ default_attributes(
             :plugins => [ "git", "git-client", "sbt", "greenballs" ]
         }
     }
+)
+
+override_attributes(
+  :sbt => {
+    :base_url => "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/",
+    :base_dir => "/opt/sbt",
+    :version => "0.12.1",
+    :checksum => "ad65a2bf1f8753c902b774d0fae2e2d884f7285b97a37e331dac5f621d7830ea"
+  }
 )
