@@ -31,6 +31,17 @@ directory "#{base_dir}" do
   recursive true
 end
 
+# Other directories
+%w{logs releases}.each do |dir|
+   directory "#{base_dir}/#{dir}" do
+      mode 00775
+      owner "#{owner}"
+      group "#{group}"
+      action :create
+      recursive true
+   end
+end
+
 # Upstart configuration
 template "/etc/init/attero.conf" do
   source "upstart_service.conf.erb"
