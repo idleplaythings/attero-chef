@@ -2,7 +2,8 @@ name "game_server"
 description "Game server role"
 all_env = [
   "role[db_master]",
-  "recipe[java]"
+  "recipe[java]",
+  "recipe[attero]"
 ]
 
 run_list(all_env)
