@@ -1,7 +1,7 @@
 {
     "id": "deploy",
     "ssh_keys": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDI4gZGDI4gFfL/8Xd8Ww+11Q2ndUlxUHk9xMtiISUZFEgI9o/aOgTFtJPg9Jv5yLdAif25f1AD0fQNz1PAKNhTpdHajjV7fI3lHwflt+iC7O/bm7UE5D3zZWeSKWPPJHjcOD49T0DxsHjFVCUMj4kM0alJ2R7npgPzxmfKspc+l+c4bi9Yc/xmdfwh2fmgmfG3fQ5pf+oqGsKNJzbRmcqHekS8bDoKrgrrx7uES5f/cQ+X5MkpGoFJ09mxiidFSfrcxCPVwBF766vI4pdnbsupavRJZmOlUB83Kc0I+zUCKpVMb6Gxaas/0KICGM9VZZX1nn+vaWPR24zWqNFxaCzR",
-    "groups": [ "deploy" ],
-    "uid": 2100,
+    "groups": [ "deployment" ],
+    "uid": 2050,
     "shell": "\/bin\/bash"
 }
