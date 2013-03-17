@@ -59,5 +59,5 @@ end
 
 # Allow user to sudo restart command
 sudo owner do
-  commands  ['/opt/attero/bin/restart_attero.sh']
+  commands ['/opt/attero/bin/restart_attero.sh']
 end
