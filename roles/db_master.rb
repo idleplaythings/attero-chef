@@ -3,7 +3,8 @@ description "Master database server"
 
 all_env = [
   "recipe[postgresql::server]",
-  "recipe[postgresql::pl_python]"
+  "recipe[postgresql::pl_python]",
+  "recipe[database::postgresql]"
 ]
 
 run_list(all_env)
