@@ -20,7 +20,7 @@ env_run_lists(
 default_attributes(
     :jenkins => {
         :server => {
-            :plugins => [ "git", "git-client", "sbt", "greenballs" ]
+            :plugins => [ "git", "git-client", "sbt", "greenballs", "build-pipeline-plugin" ]
         }
     }
 )
