@@ -20,7 +20,7 @@ bundle exec knife ec2 server create \
     --environment prod \
     --image "ami-e1e8d395" \
     --flavor "t1.micro" \
-    --run-list "role[base]" \
+    --run-list "role[base],role[game_server]" \
     --node-name "demo.hulldowngame.com" \
     --availability-zone "eu-west-1a" \
     --region "eu-west-1" \
