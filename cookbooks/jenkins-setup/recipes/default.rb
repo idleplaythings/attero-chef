@@ -7,9 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-# Set up known hosts for Jenkins SSH
-cookbook_file "#{node[:jenkins][:server][:home]}/.ssh/known_hosts" do
-  source "jenkins_known_hosts"
+# Set Jenkins SSH config
+cookbook_file "#{node[:jenkins][:server][:home]}/.ssh/config" do
+  source "ssh_config"
   mode 0644
   owner "jenkins"
   group "jenkins"
