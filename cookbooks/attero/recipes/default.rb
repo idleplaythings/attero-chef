@@ -32,12 +32,22 @@ end
    end
 end
 
+# Deployment scripts
+%w{deploy_release.sh restart_attero.sh}.each do |script|
+    cookbook_file "#{base_dir}/bin/#{script}" do
+        source script
+        mode 0554
+        owner "#{owner}"
+        group "#{group}"
+    end
+end
+
 # Upstart configuration
 template "/etc/init/attero.conf" do
   source "upstart_service.conf.erb"
-  mode 0775
-  owner "#{owner}"
-  group "#{group}"
+  mode 0644
+  owner "root"
+  group "root"
   variables(
     # :config_var => node[:configs][:config_var]
   )
@@ -47,7 +57,7 @@ deploy = Chef::EncryptedDataBagItem.load("secrets", "deploy")
 
 # s3cmd configuration file
 template "#{base_dir}/conf/s3.conf" do
-  mode 0600
+  mode 0400
   owner "#{owner}"
   group "#{owner}"
   source "s3cfg.erb"
@@ -57,7 +67,9 @@ template "#{base_dir}/conf/s3.conf" do
   )
 end
 
-# Allow user to sudo restart command
-sudo owner do
-  commands ['/opt/attero/bin/restart_attero.sh']
+# Allow user to sudo restart script
+sudo "attero" do
+    user owner
+    nopasswd true
+    commands ['/opt/attero/bin/restart_attero.sh']
 end

@@ -22,5 +22,10 @@ override_attributes(
     :oracle => {
       :accept_oracle_download_terms => true
     }
+  },
+  :authorization => {
+    :sudo => {
+      :include_sudoers_d => true
+    }
   }
 )
