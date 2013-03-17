@@ -56,3 +56,8 @@ template "#{base_dir}/conf/s3.conf" do
     :secret_key => deploy["aws"]["secret_key"]
   )
 end
+
+# Allow user to sudo restart command
+sudo owner do
+  commands  ['/opt/attero/bin/restart_attero.sh']
+end
