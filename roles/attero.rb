@@ -1,8 +1,8 @@
-name "game_server"
-description "Game server role"
+name "attero"
+description "Attero - The Game server"
+
 all_env = [
   "recipe[users::deployment]",
-  "role[db_master]",
   "recipe[java]",
   "recipe[attero]"
 ]
@@ -15,7 +15,7 @@ env_run_lists(
   "dev" => all_env
 )
 
-override_attributes(
+default_attributes(
   :java => {
     :jdk_version => "6",
     :install_flavor => "oracle",
@@ -29,3 +29,5 @@ override_attributes(
     }
   }
 )
+
+override_attributes()

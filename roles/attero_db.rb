@@ -1,5 +1,5 @@
-name "db_master"
-description "Master database server"
+name "attero_db"
+description "Attero Database"
 
 all_env = [
   "recipe[postgresql::server]",
@@ -14,3 +14,5 @@ env_run_lists(
   "prod" => all_env,
   "dev" => all_env
 )
+
+override_attributes()

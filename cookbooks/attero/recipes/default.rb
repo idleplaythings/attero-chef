@@ -73,3 +73,22 @@ sudo "attero" do
     nopasswd true
     commands ['/opt/attero/bin/restart_attero.sh']
 end
+
+# Create attero database and db user
+postgresql_connection_info = {
+    :host => "localhost",
+    :port => node['postgresql']['config']['port'],
+    :username => 'postgres',
+    :password => node['postgresql']['password']['postgres']
+}
+
+postgresql_database 'playuser' do
+  connection postgresql_connection_info
+  action :create
+end
+
+postgresql_database_user 'playuser' do
+  connection postgresql_connection_info
+  password 'playuser'
+  action :create
+end

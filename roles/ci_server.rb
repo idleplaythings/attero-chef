@@ -18,14 +18,11 @@ env_run_lists(
 )
 
 default_attributes(
-    :jenkins => {
-        :server => {
-            :plugins => [ "git", "git-client", "sbt", "greenballs", "build-pipeline-plugin" ]
-        }
+  :jenkins => {
+    :server => {
+      :plugins => [ "git", "git-client", "sbt", "greenballs", "build-pipeline-plugin" ]
     }
-)
-
-override_attributes(
+  },
   :sbt => {
     :base_url => "http://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/",
     :base_dir => "/opt/sbt",
@@ -33,3 +30,5 @@ override_attributes(
     :checksum => "ad65a2bf1f8753c902b774d0fae2e2d884f7285b97a37e331dac5f621d7830ea"
   }
 )
+
+override_attributes()

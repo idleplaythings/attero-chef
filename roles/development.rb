@@ -1,9 +1,7 @@
-name "dev_server"
-description "Development server role"
+name "development"
+description "Development Server"
+
 all_env = [
-  "role[game_server]",
-  "recipe[scala::http]",
-  "recipe[play::http]",
   "recipe[git]"
 ]
 
@@ -28,10 +26,7 @@ default_attributes(
     :config => {
       :listen_addresses => '192.168.123.123'
     }
-  }
-)
-
-override_attributes(
+  },
   :scala => {
     :base_url => "http://www.scala-lang.org/downloads/distrib/files",
     :base_dir => "/opt/scala",
@@ -51,3 +46,5 @@ override_attributes(
       }
   }
 )
+
+override_attributes()

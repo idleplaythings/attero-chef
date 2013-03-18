@@ -3,9 +3,18 @@
   "chef_environment": "prod",
   "run_list": [
     "role[base]",
-    "role[game_server]"
+    "role[attero]",
+    "role[attero_db]"
   ],
   "normal": {
+    "postgresql": {
+      "password": {
+        "postgres": "Vyg1kHkIH2JW8yWRPLku"
+      }
+    },
+    "build_essential": {
+      "compiletime": true
+    },
     "tags": [
 
     ]
