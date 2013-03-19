@@ -15,6 +15,11 @@ cookbook_file "#{node[:jenkins][:server][:home]}/.ssh/config" do
   group "jenkins"
 end
 
+# Install graphvix
+package "graphviz" do
+  action :install
+end
+
 # Set up Jenkins SSH keys
 ci = Chef::EncryptedDataBagItem.load("secrets", "ci")
 

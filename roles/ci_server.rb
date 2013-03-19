@@ -20,7 +20,15 @@ env_run_lists(
 default_attributes(
   :jenkins => {
     :server => {
-      :plugins => [ "git", "git-client", "sbt", "greenballs", "build-pipeline-plugin" ]
+      :plugins => [
+        "git",
+        "git-client",
+        "sbt",
+        "greenballs",
+        "build-pipeline-plugin",
+        "parameterized-trigger",
+        "depgraph-view"
+      ]
     }
   },
   :sbt => {
