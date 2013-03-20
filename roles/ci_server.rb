@@ -27,7 +27,11 @@ default_attributes(
         "greenballs",
         "build-pipeline-plugin",
         "parameterized-trigger",
-        "depgraph-view"
+        "depgraph-view",
+        "analysis-core",
+        "analysis-collector",
+        "checkstyle",
+        "openid"
       ]
     }
   },
